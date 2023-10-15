@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background_2"
+    tools:context=".Detail_Activity">
+
+    <!--  Bagian Atas  -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bagian_atas_cl"
+        android:layout_width="255dp"
+        android:layout_height="27dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="36dp"
+        android:layout_marginStart="41dp"
+
+        >
+        <ImageView
+            android:id="@+id/icon_back"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:src="@drawable/back_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail Movie"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="18sp"
+            android:layout_marginEnd="45dp"
+            android:textColor="@color/White_1"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bagian_atas_cl">
+        <!--Content-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/bagian_atas_cl"
+            app:layout_constraintStart_toStartOf="@+id/bagian_atas_cl"
+            app:layout_constraintTop_toBottomOf="@+id/bagian_atas_cl"
+            >
+            <!--  Image_desc   -->
+            <ImageView
+                android:id="@+id/Image_desc"
+                android:layout_width="328dp"
+                android:layout_height="400dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/film_3_nemo"
+                android:layout_marginStart="45dp"
+                />
+
+            <!--  Deskripsi_judul_Film  -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Deskripsi_judul_Film"
+                android:layout_width="260dp"
+                android:layout_height="44dp"
+                app:layout_constraintStart_toStartOf="@+id/Image_desc"
+                app:layout_constraintTop_toBottomOf="@id/Image_desc"
+                android:layout_marginTop="23dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Finding Nemo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/Gold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Director: Erik Richter Strand"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textColor="@color/White_1"
+                    />
+
+                <ImageView
+                    android:id="@+id/star_img_2"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/star_icon"
+                    app:layout_constraintEnd_toStartOf="@id/rating_tv"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginEnd="3dp"
+                    />
+                <TextView
+                    android:id="@+id/rating_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.9/5"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginStart="4dp"
+                    android:textColor="@color/White_1"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--  Deskripsi_Genre_Film  -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Deskripsi_Genre_Film"
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/Deskripsi_judul_Film"
+                app:layout_constraintTop_toBottomOf="@id/Deskripsi_judul_Film"
+                >
+                <TextView
+                    android:id="@+id/action_genre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Action"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/custom_rounded_box_2"
+                    android:padding="3dp"
+                    android:textColor="@color/White_1"
+                    />
+
+                <TextView
+                    android:id="@+id/horor_genre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Horor"
+                    app:layout_constraintStart_toEndOf="@id/action_genre"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/custom_rounded_box_2"
+                    android:padding="3dp"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/White_1"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--  Deskripsi_sinopsis_Film  -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Deskripsi_sinopsis_Film"
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/Deskripsi_Genre_Film"
+                app:layout_constraintTop_toBottomOf="@id/Deskripsi_Genre_Film"
+                android:layout_marginTop="3dp"
+
+                >
+                <TextView
+                    android:id="@+id/Storyline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Storyline"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="@color/Gold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Adele is a Scottish heiress whose extremely
+    wealthy family owns estates and grounds.
+    When she was a teenager."
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="@id/Storyline"
+                    app:layout_constraintTop_toBottomOf="@id/Storyline"
+                    android:textColor="@color/White_1"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/Get_ticket_button"
+                android:layout_width="330dp"
+                android:layout_height="50dp"
+                app:layout_constraintStart_toStartOf="@id/Deskripsi_sinopsis_Film"
+                app:layout_constraintTop_toBottomOf="@id/Deskripsi_sinopsis_Film"
+                android:text="Get Ticket"
+                android:backgroundTint="@color/Gold"
+                android:textColor="@color/White_1"
+                android:layout_marginTop="20dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

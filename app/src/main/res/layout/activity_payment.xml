@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="805dp"
+    android:background="@color/Background_2"
+
+    tools:context=".Payment_Activity">
+
+    <!--  bagian_atas_cl  -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bagian_atas_cl"
+        android:layout_width="255dp"
+        android:layout_height="27dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="36dp"
+        android:layout_marginStart="41dp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:src="@drawable/back_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Method"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="18sp"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/White_1"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/bagian_atas_cl"
+        app:layout_constraintTop_toTopOf="@+id/bagian_atas_cl"
+        android:layout_marginTop="20dp"
+        >
+        <!--  Content  -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bagian_atas_cl"
+            >
+
+            <!--  Pilih_bioskop  -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Pilih_bioskop"
+                android:layout_width="340dp"
+                android:layout_height="70dp"
+                app:layout_constraintStart_toStartOf="@+id/Content"
+                android:layout_marginStart="30dp"
+                app:layout_constraintTop_toTopOf="@id/Content"
+                android:layout_marginTop="23dp"
+                >
+
+                <TextView
+                    android:id="@+id/bioskop_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pilih Bioskop"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="@+id/Pilih_bioskop"
+                    app:layout_constraintTop_toTopOf="@id/Pilih_bioskop"
+                    android:textColor="@color/Gold"
+                    />
+                <Spinner
+                    android:id="@+id/Pilih_bioskop_tv"
+                    android:layout_width="329dp"
+                    android:layout_height="41dp"
+                    app:layout_constraintStart_toStartOf="@+id/bioskop_tv"
+                    app:layout_constraintTop_toBottomOf="@id/bioskop_tv"
+                    android:backgroundTint="@color/Gray"
+                    android:background="@drawable/custom_rounded_box"
+                    android:entries="@array/Bioskop"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--  Pilih_seat  -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Pilih_seat"
+                android:layout_width="340dp"
+                android:layout_height="70dp"
+                app:layout_constraintStart_toStartOf="@+id/Pilih_bioskop"
+                app:layout_constraintTop_toBottomOf="@id/Pilih_bioskop"
+                android:layout_marginTop="23dp"
+                >
+
+                <TextView
+                    android:id="@+id/Seat_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pilih Jenis Seat"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="@color/Gold"
+
+                    />
+                <Spinner
+                    android:id="@+id/Pilih_seat_tv"
+                    android:layout_width="329dp"
+                    android:layout_height="41dp"
+                    android:entries="@array/Jenis_Seat"
+                    app:layout_constraintStart_toStartOf="@+id/Seat_tv"
+                    app:layout_constraintTop_toBottomOf="@id/Seat_tv"
+                    android:backgroundTint="@color/Gray"
+                    android:background="@drawable/custom_rounded_box"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--  Pilih_jam_tayang  -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Pilih_jam_tayang"
+                android:layout_width="340dp"
+                android:layout_height="70dp"
+                app:layout_constraintStart_toStartOf="@+id/Pilih_seat"
+                app:layout_constraintTop_toBottomOf="@id/Pilih_seat"
+                android:layout_marginTop="23dp"
+                >
+
+                <TextView
+                    android:id="@+id/Jam_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pilih Jam Tayang"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="@color/Gold"
+
+                    />
+                <Spinner
+                    android:id="@+id/Pilih_jam_tayang_tv"
+                    android:layout_width="329dp"
+                    android:layout_height="41dp"
+                    android:entries="@array/Pilih_jam_tayang"
+                    app:layout_constraintStart_toStartOf="@+id/Jam_tv"
+                    app:layout_constraintTop_toBottomOf="@id/Jam_tv"
+                    android:backgroundTint="@color/Gray"
+                    android:background="@drawable/custom_rounded_box"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--  Pilih_tanggal  -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Pilih_tanggal"
+                android:layout_width="340dp"
+                android:layout_height="42dp"
+                app:layout_constraintStart_toStartOf="@+id/Pilih_jam_tayang"
+                app:layout_constraintTop_toBottomOf="@id/Pilih_jam_tayang"
+                android:layout_marginTop="23dp"
+
+                >
+
+                <TextView
+                    android:id="@+id/Tanggal_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pilih Tanggal :  "
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textColor="@color/Gold"
+
+                    />
+
+                <TextView
+                    android:id="@+id/Tanggal_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/Tanggal_tv"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="Tanggal"
+                    android:textColor="@color/Gray_2"
+                    >
+
+                </TextView>
+                <Button
+                    android:id="@+id/date"
+                    android:layout_width="103dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="Click"
+                    android:backgroundTint="@color/Gray"
+                    android:background="@drawable/custom_rounded_box"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--  Payment_Method  -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Payment_Method"
+                android:layout_width="340dp"
+                android:layout_height="70dp"
+                app:layout_constraintStart_toStartOf="@+id/Pilih_seat"
+                app:layout_constraintTop_toBottomOf="@id/Pilih_tanggal"
+                android:layout_marginTop="23dp"
+                >
+
+                <TextView
+                    android:id="@+id/Pay_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Payment Method"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="@color/Gold"
+
+                    />
+                <Spinner
+                    android:id="@+id/Payment_Method_tv"
+                    android:layout_width="329dp"
+                    android:layout_height="41dp"
+                    app:layout_constraintStart_toStartOf="@+id/Pay_tv"
+                    app:layout_constraintTop_toBottomOf="@id/Pay_tv"
+                    android:backgroundTint="@color/Gray"
+                    android:background="@drawable/custom_rounded_box"
+                    android:entries="@array/Pay_method"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--  Payment_Method_2  -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/Payment_Method_2"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/Pilih_seat"
+                app:layout_constraintTop_toBottomOf="@+id/Payment_Method"
+                android:layout_marginTop="23dp">
+
+                <Spinner
+                    android:id="@+id/spinnerPaymentMethod"
+                    android:layout_width="120dp"
+                    android:layout_height="41dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:backgroundTint="@color/Gray"
+                    android:background="@drawable/custom_rounded_box"
+                    android:entries="@array/Bank"
+                    />
+
+                <EditText
+                    android:id="@+id/etAccountNumber"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/spinnerPaymentMethod"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:hint="Account Number"
+                    android:background="@drawable/custom_rounded_box"
+                    android:padding="8dp" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--  Payment_details  -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Payment_details"
+                android:layout_width="337dp"
+                android:layout_height="60dp"
+                app:layout_constraintStart_toStartOf="@+id/Pilih_jam_tayang"
+                app:layout_constraintTop_toBottomOf="@id/Payment_Method_2"
+                android:layout_marginTop="10dp"
+                >
+                <TextView
+                    android:id="@+id/Jenis_seat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jenis Seat"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="@color/White_1"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp 35.000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="@color/White_1"
+
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="29dp"
+                    android:background="@color/White_1"
+
+                    />
+                <TextView
+                    android:id="@+id/Actual_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Actual Pay"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textColor="@color/White_1"
+
+                    />
+                <TextView
+                    android:id="@+id/payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp 35.000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/Gold"
+
+                    />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/Button_pay"
+                android:layout_width="350dp"
+                android:layout_height="59dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Payment_details"
+                android:text="Order Summary"
+                android:textSize="20sp"
+                android:backgroundTint="@color/Gold"
+                android:layout_marginTop="10dp"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
